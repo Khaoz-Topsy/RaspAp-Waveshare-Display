@@ -1,11 +1,7 @@
 <div align="center">
   
-  # Kurt's Public microcontroller projects
+  # My microcontroller projects
   _Just the results of my tinkering._
-  
-  <br />  
-  
-  ![header](https://github.com/AssistantApps/.github/blob/main/img/animatedBanner.svg?raw=true) 
   
   <br />
 
@@ -24,4 +20,5 @@
   - Self built web controlled car using a Raspberry Pi Zero 2W
 
 [raspapWeb]: https://raspap.com
-[discord]: https://assistantapps.com/discord?ref=AssistantAppsGithub
+[assistantnmsTwitter]: https://twitter.com/AssistantNMS?ref=KurtGithub
+[discord]: https://assistantapps.com/discord?ref=KurtGithub
