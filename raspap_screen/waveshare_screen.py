@@ -2,8 +2,8 @@
 # -*- coding:utf-8 -*-
 import sys
 import os
-picdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'pic')
-libdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'lib')
+picdir = os.path.join(os.path.realpath(__file__), 'pic')
+libdir = os.path.join(os.path.realpath(__file__), 'lib')
 if os.path.exists(libdir):
     sys.path.append(libdir)
 
@@ -15,13 +15,11 @@ from PIL import Image,ImageDraw,ImageFont
 import traceback
 
 logging.basicConfig(level=logging.DEBUG)
-base_api_url = "http://127.0.0.1:8081/"
-client_ap_name = "wlan1"
-auth_headers = {'access_token': ''}
+base_api_url = "http://127.0.0.1:" + str(os.environ.get('API_PORT'))
+client_ap_name = os.environ.get('INTERFACE')
+auth_headers = {'access_token': os.environ.get('RASPAPI_TOKEN')}
 
 try:
-    logging.info("Kurt's custom screen")
-
     epd = epd2in13b_V4.EPD()
     logging.info("init and Clear")
     epd.init()
